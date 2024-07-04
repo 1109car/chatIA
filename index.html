@@ -114,7 +114,7 @@
 
     <script type="module">
 
-        import { CreateWebWorkerMLCEngine  } from "https://esm.run/@mlc-ai/web-llm";
+        import { CreateMLCEngine  } from "https://esm.run/@mlc-ai/web-llm";
 
 
 const $ = el  => document.querySelector(el)
@@ -134,8 +134,8 @@ const $info = $('small')
 
         const SELECTED_MODEL = 'gemma-2b-it-q4f32_1-MLC'
 
-        const engine = await CreateWebWorkerMLCEngine (
-           new Worker('/worker.js', { type: 'module' }),
+        const engine = await CreateMLCEngine (
+           // new Worker('/worker.js', { type: 'module' }),
            SELECTED_MODEL,
            {
                initProgressCallback: (info) => {
